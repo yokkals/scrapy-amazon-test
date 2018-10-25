@@ -11,7 +11,7 @@ class AmazonSpider(scrapy.Spider):
 
     def parse(self, response):
         for asin in response.xpath("//ul[@id='s-results-list-atf']/li/@data-asin").extract():
-            yield scrapy.Request("http://www.amazon.com/dp/" + str(asin)), callback=self.parse_product_page)
+            yield scrapy.Request("http://www.amazon.com/dp/" + str(asin), callback=self.parse_product_page)
 
     def parse_product_page(self, response):
         item = {}
