@@ -4,7 +4,7 @@ import scrapy
 
 class AmazonSpider(scrapy.Spider):
     name = "amazon"
-    allowed_domains = ["amazon.com"]
+    allowed_domains = ["www.amazon.com"]
     start_urls = [
         'https://www.amazon.com/s/ref=lp_3760911_nr_p_85_0?fst=as%3Aoff&rh=n%3A3760911%2Cp_85%3A2470955011&bbn=3760911&ie=UTF8&qid=1540481287&rnid=2470954011',
     ]
